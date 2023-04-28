@@ -130,7 +130,7 @@ function Sidebar({
                     }}
                 >
                     <Box width="100%">
-                        <Box m="1.5rem 2rem 2rem 3rem">
+                        <Box m="1.5rem 1.5rem 2rem 3rem">
                             <FlexBetween color={theme.palette.secondary.main}>
                                 <Box display="flex" alignItems="center" gap="0.5rem">
                                     <Typography variant='h4' fontWeight="bold">
@@ -176,13 +176,13 @@ function Sidebar({
                                             }}
                                         >
                                             <ListItemIcon sx={{
-                                                m: "2rem",
+                                                m: "1rem",
                                                 color: active === lcText
                                                     ? theme.palette.primary[600]
                                                     : theme.palette.secondary[200],
                                             }}>
                                                 {icon}
-                                                <ListItemText primary={text} />
+                                                <ListItemText primary={text} sx={{ml:"1.5rem"}}/>
                                                 {
                                                     active === lcText && (
                                                         <ChevronRightOutlined sx={{ ml: "auto" }} />

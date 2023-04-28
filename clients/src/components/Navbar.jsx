@@ -11,7 +11,7 @@ import profileImage from "../assets/person1.jfif"
 import { AppBar, IconButton, InputBase, Toolbar, useTheme } from '@mui/material';
 
 
-function Navbar() {
+function Navbar({isSideBarOpen,setIsSideBarOpen}) {
     const dispatch = useDispatch();
     const theme = useTheme();
     return (
@@ -24,8 +24,9 @@ function Navbar() {
                 justifyContent: "space-between",
             }}>
                 {/* Left side  */}
+               
                 <FlexBetween>
-                    <IconButton onClick={() => console.log("open/close sidebar")}>
+                    <IconButton onClick={() => setIsSideBarOpen(!isSideBarOpen)}>    {/* "open/close sidebar" */}
                         <MenuIcon />
                     </IconButton>
                
