@@ -5,7 +5,7 @@ import {useSelector} from "react-redux";
 import Navbar from "../../components/Navbar"
 import Outlet from "../../components/Outlet"
 import Sidebar from '../../components/Sidebar';
-import {  useGetUserQuery } from "../../state/api.js";
+import { useGetUserQuery } from "../../state/api";
 
 
 
@@ -13,7 +13,7 @@ function Layout() {
   const isNonMobile =  useMediaQuery("(min-width:600px)"); // mobile
   const [isSideBarOpen, setIsSideBarOpen] =useState(true);
 
-  const userId = useSelector((state)=>state.global.userId);
+  const userId = useSelector((state) => state.global.userId);
   const { data } = useGetUserQuery(userId);
 console.log("data: ", data);
 
