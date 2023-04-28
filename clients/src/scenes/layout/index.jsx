@@ -5,7 +5,7 @@ import {useSelector} from "react-redux";
 import Navbar from "../../components/Navbar"
 import Outlet from "../../components/Outlet"
 import Sidebar from '../../components/Sidebar';
-import { useGetUserQuery } from '../../state/api';
+import {useGetUserQuery} from "../../state/api.js";
 
 
 
@@ -19,7 +19,9 @@ function Layout() {
 
   return (
     <Box display={isNonMobile?"flex" :"block"} width="100%" height="100%">
-      <Sidebar isNonMobile={isNonMobile}
+      <Sidebar
+        user={data || {}}
+       isNonMobile={isNonMobile}
         drawerWidth="250px"
         isSideBarOpen={isSideBarOpen}
         setIsSideBarOpen={setIsSideBarOpen}
